@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25097,        463]
-NotebookOptionsPosition[     24100,        430]
-NotebookOutlinePosition[     24916,        458]
-CellTagsIndexPosition[     24842,        453]
+NotebookDataLength[     47921,        874]
+NotebookOptionsPosition[     43921,        793]
+NotebookOutlinePosition[     46265,        845]
+CellTagsIndexPosition[     46191,        840]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,9 +23,9 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"Get", "@", 
   RowBox[{
-  "URLDownload", "[", 
-   "\"\<https://raw.githubusercontent.com/wqfang/HCMP_Project/master/src/GUI3.\
-wl\>\"", "]"}]}]], "Input",
+  "URLDownload", 
+   "[", "\"\<https://raw.githubusercontent.com/wqfang/HCMP_Project/master/src/\
+GUI3.wl\>\"", "]"}]}]], "Input",
  ShowCellBracket->False,
  CellOpen->False,
  InitializationCell->True,
@@ -116,34 +116,33 @@ wl\>\"", "]"}]}]], "Input",
    3.797767441988985*^9, 3.7977674883002357`*^9}, {3.797767559408841*^9, 
    3.797767560037642*^9}, {3.823278253029213*^9, 3.8232782531206827`*^9}},
  Background->GrayLevel[1],
- CellTags->
-  "Subroutines",ExpressionUUID->"8841a066-2333-45df-a981-fcca830a398c"],
+ CellTags->"Subroutines",
+ CellLabel->"In[83]:=",ExpressionUUID->"8841a066-2333-45df-a981-fcca830a398c"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`NoBeads$$ = 0, $CellContext`NoConfgs$$ = 
-    0, $CellContext`WorkDir$$ = "Null", Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`NoBeads$$ = 837, $CellContext`NoConfgs$$ = 
+    837, $CellContext`WorkDir$$ = 
+    "A:\\251208_HCMP_Model\\HCMP_Model_V2\\Probe\\", Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`WorkDir$$], "Null"}, 0}, {{
-       Hold[$CellContext`NoBeads$$], 0}, 0}, {{
-       Hold[$CellContext`NoConfgs$$], 0}, 0}, {
+       Hold[$CellContext`WorkDir$$], "Null"}, 0, ControlType -> None}, {{
+       Hold[$CellContext`NoBeads$$], 0}, 0, ControlType -> None}, {{
+       Hold[$CellContext`NoConfgs$$], 0}, 0, ControlType -> None}, {
       Hold[
-       DynamicModule[{$CellContext`ParticlePre = 
-         "Particle", $CellContext`TimePre = 
-         "Time", $CellContext`PtcList, $CellContext`PtcNo, \
+       DynamicModule[{$CellContext`ParticlePre = "Bead", $CellContext`TimePre = 
+         "Sk", $CellContext`PtcList, $CellContext`PtcNo, \
 $CellContext`PtcName, $CellContext`GDirR, $CellContext`GDirD, \
 $CellContext`rList = {}, $CellContext`Vol2List = {}, $CellContext`Vol1List = \
 {}, $CellContext`AvgBdList = {}, $CellContext`EEDensityList = {}, \
 $CellContext`EEList = {}, $CellContext`outf = Null, $CellContext`BT = 
-         0.06, $CellContext`ES = 10, $CellContext`Y0 = 
-         262., $CellContext`\[Nu]0 = 0.443, $CellContext`MeshRefineFactor = 
-         1}, 
+         0.1, $CellContext`ES = 10, $CellContext`PR = 0.65, $CellContext`Y0 = 
+         262., $CellContext`\[Nu]0 = 0.443}, 
         Grid[{{
-           Style["Parallel processing of massive data set", 20], SpanFromLeft,
-            SpanFromLeft}, {
+           Style["Parallel processing of massive 2D Projection Images", 20], 
+           SpanFromLeft, SpanFromLeft}, {
            Button[
            "Choose working directory of the project", $CellContext`WorkDir$$ = 
              SystemDialogInput[
@@ -154,7 +153,7 @@ $CellContext`EEList = {}, $CellContext`outf = Null, $CellContext`BT =
            InputField[
             Dynamic[$CellContext`ParticlePre], String], 
            Dynamic[$CellContext`ParticlePre]}, {
-           Item["Prefix for Time folders", Alignment -> Right], 
+           Item["Prefix for Time", Alignment -> Right], 
            InputField[
             Dynamic[$CellContext`TimePre], String], 
            Dynamic[$CellContext`TimePre]}, {
@@ -174,7 +173,7 @@ $CellContext`TimePre]; {$CellContext`NoBeads$$, $CellContext`NoConfgs$$} = {
                  Total[
                   Map[Length, $CellContext`GDirD]]}; Null]; Null, Method -> 
             "Queued", ImageSize -> 400], SpanFromLeft, SpanFromLeft}, {
-           Button["Perform Finite Element Calculation", If[
+           Button["Perform 2D Calculation", If[
               
               Or[$CellContext`NoBeads$$ === 0, $CellContext`NoConfgs$$ === 
                0], $CellContext`CenterMessageDialog[
@@ -184,17 +183,16 @@ Configurations."]; Null,
                 0]; {$CellContext`rList, $CellContext`Vol2List, \
 $CellContext`Vol1List, $CellContext`AvgBdList, $CellContext`EEDensityList, \
 $CellContext`EEList} = 
-               HCMP`FEMAll[$CellContext`GDirR, $CellContext`GDirD, \
-$CellContext`NoBeads$$, $CellContext`BT, $CellContext`ES, $CellContext`Y0, \
-$CellContext`\[Nu]0, $CellContext`MeshRefineFactor]; \
-$CellContext`CenterMessageDialog["Finite Element Calculation is done."]; 
-              Null]; Null, Method -> "Queued", ImageSize -> 300], 
-           SpanFromLeft, SpanFromLeft}, {
+               HCMP`Calc2D[$CellContext`GDirR, $CellContext`GDirD, \
+$CellContext`NoBeads$$, $CellContext`BT, $CellContext`ES, $CellContext`PR, \
+$CellContext`Y0, $CellContext`\[Nu]0]; $CellContext`CenterMessageDialog[
+               "2D Calculation is done."]; Null]; Null, Method -> "Queued", 
+            ImageSize -> 300], SpanFromLeft, SpanFromLeft}, {
            Button[
            "Output Results to Excel", 
             If[$CellContext`rList === 
               0, $CellContext`CenterMessageDialog[
-               "Please Perform Finite Element Calculation."]; 
+               "Please Perform 2D Calculation."]; 
               Null, $CellContext`outf = SystemDialogInput["FileSave", 
                  FileNameJoin[{$CellContext`WorkDir$$, "ResultSheet.xls"}]]; 
               HCMP`OutExcel[$CellContext`outf, $CellContext`NoBeads$$, \
@@ -222,8 +220,12 @@ $CellContext`EEDensityList, $CellContext`EEList];
                     Slider[
                     Dynamic[$CellContext`ES], {2, 20}], 
                     Dynamic[$CellContext`ES]}, {
-                    Style["For Finite Element Calculation:", Bold], 
-                    SpanFromLeft, SpanFromLeft}, {
+                    Item["Pixel ratio (\[Mu]m/Px)", Alignment -> Right], 
+                    InputField[
+                    Dynamic[$CellContext`PR], Number], 
+                    Dynamic[$CellContext`PR]}, {
+                    Style["For 2D Calculation:", Bold], SpanFromLeft, 
+                    SpanFromLeft}, {
                     Item["Young's modulus (Pa)", Alignment -> Right], 
                     InputField[
                     Dynamic[$CellContext`Y0], Number], 
@@ -232,22 +234,16 @@ $CellContext`EEDensityList, $CellContext`EEList];
                     InputField[
                     Dynamic[$CellContext`\[Nu]0], Number], 
                     Dynamic[$CellContext`\[Nu]0]}, {
-                    Item["Mesh Refine Factor", Alignment -> Right], 
-                    PopupMenu[
-                    Dynamic[$CellContext`MeshRefineFactor], {
-                    0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2}], 
-                    Dynamic[$CellContext`MeshRefineFactor]}, {
                     Button[
                     "Reset All Parameters to Default Value", $CellContext`BT = 
                     0.06; $CellContext`ES = 10; $CellContext`Y0 = 
-                    262; $CellContext`\[Nu]0 = 
-                    0.443; $CellContext`MeshRefineFactor = 1; Null, Method -> 
+                    262; $CellContext`\[Nu]0 = 0.443; Null, Method -> 
                     "Queued"], SpanFromLeft, SpanFromLeft}}, Alignment -> 
                    Left, BaseStyle -> {
                     FontSize -> 13, FontFamily -> "Helvetica"}, 
-                   Spacings -> {2, {4 -> 2, 8 -> 2, 14 -> 2, 16 -> 2}}], 
-                  FrameMargins -> 14, ImageSize -> {550, 350}], 
-                 NotebookDynamicExpression :> Refresh[
+                   Spacings -> {2, {5 -> 2, 8 -> 2}}], FrameMargins -> 14, 
+                  ImageSize -> {550, 250}], NotebookDynamicExpression :> 
+                 Refresh[
                    SetOptions[
                     EvaluationNotebook[], 
                     WindowMargins -> $CellContext`parentCenter$ - 
@@ -258,9 +254,11 @@ $CellContext`EEDensityList, $CellContext`EEList];
             ImageSize -> 300], SpanFromLeft, SpanFromLeft}}, 
          Spacings -> {1, {0.8, 2 -> 2}}, Alignment -> Center, 
          BaseStyle -> {FontSize -> 13, FontFamily -> "Helvetica"}], 
-        DynamicModuleValues :> {}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {450., {35., 40.}}, Typeset`update$$ = 0, 
-    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+        DynamicModuleValues :> {}]], Manipulate`Dump`ThisIsNotAControl, 
+      ControlType -> None}}, Typeset`size$$ = {
+    450., {32.7416015625, 36.8744140625}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`NoBeads$$ = 0, $CellContext`NoConfgs$$ = 
@@ -269,31 +267,29 @@ $CellContext`EEDensityList, $CellContext`EEList];
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Panel[
-        Grid[{{
-           StringJoin["Work Dir: ", $CellContext`WorkDir$$], SpanFromLeft}, {
-           StringJoin["Number of Particles: ", 
-            IntegerString[$CellContext`NoBeads$$]], SpanFromLeft}, {
-           StringJoin["Number of Deformed Configurations: ", 
-            IntegerString[$CellContext`NoConfgs$$]], SpanFromLeft}}, 
-         Alignment -> Left, 
-         BaseStyle -> {FontSize -> 14, FontFamily -> "Helvetica"}], ImageSize -> 
-        450, Background -> White], 
+         Typeset`skipInitDone$$, Typeset`keyframeActionsQ$$, 
+        Typeset`keyframeList$$}, "Body" :> Panel[
+        Grid[{{"Work Dir: " <> $CellContext`WorkDir$$, SpanFromLeft}, {
+          "Number of Particles: " <> IntegerString[$CellContext`NoBeads$$], 
+           SpanFromLeft}, {
+          "Number of Deformed Configurations: " <> 
+           IntegerString[$CellContext`NoConfgs$$], SpanFromLeft}}, Alignment -> 
+         Left, BaseStyle -> {FontSize -> 14, FontFamily -> "Helvetica"}], 
+        ImageSize -> 450, Background -> White], 
       "Specifications" :> {{{$CellContext`WorkDir$$, "Null"}, 0, ControlType -> 
          None}, {{$CellContext`NoBeads$$, 0}, 0, ControlType -> 
          None}, {{$CellContext`NoConfgs$$, 0}, 0, ControlType -> None}, 
         DynamicModule[{$CellContext`ParticlePre = 
-          "Particle", $CellContext`TimePre = 
-          "Time", $CellContext`PtcList, $CellContext`PtcNo, \
+          "Bead", $CellContext`TimePre = 
+          "Sk", $CellContext`PtcList, $CellContext`PtcNo, \
 $CellContext`PtcName, $CellContext`GDirR, $CellContext`GDirD, \
 $CellContext`rList = {}, $CellContext`Vol2List = {}, $CellContext`Vol1List = \
 {}, $CellContext`AvgBdList = {}, $CellContext`EEDensityList = {}, \
 $CellContext`EEList = {}, $CellContext`outf = Null, $CellContext`BT = 
-          0.06, $CellContext`ES = 10, $CellContext`Y0 = 
-          262., $CellContext`\[Nu]0 = 0.443, $CellContext`MeshRefineFactor = 
-          1}, 
+          0.1, $CellContext`ES = 10, $CellContext`PR = 0.65, $CellContext`Y0 = 
+          262., $CellContext`\[Nu]0 = 0.443}, 
          Grid[{{
-            Style["Parallel processing of massive data set", 20], 
+            Style["Parallel processing of massive 2D Projection Images", 20], 
             SpanFromLeft, SpanFromLeft}, {
             Button[
             "Choose working directory of the project", $CellContext`WorkDir$$ = 
@@ -305,7 +301,7 @@ $CellContext`EEList = {}, $CellContext`outf = Null, $CellContext`BT =
             InputField[
              Dynamic[$CellContext`ParticlePre], String], 
             Dynamic[$CellContext`ParticlePre]}, {
-            Item["Prefix for Time folders", Alignment -> Right], 
+            Item["Prefix for Time", Alignment -> Right], 
             InputField[
              Dynamic[$CellContext`TimePre], String], 
             Dynamic[$CellContext`TimePre]}, {
@@ -325,7 +321,7 @@ $CellContext`TimePre]; {$CellContext`NoBeads$$, $CellContext`NoConfgs$$} = {
                   Total[
                    Map[Length, $CellContext`GDirD]]}; Null]; Null, Method -> 
              "Queued", ImageSize -> 400], SpanFromLeft, SpanFromLeft}, {
-            Button["Perform Finite Element Calculation", If[
+            Button["Perform 2D Calculation", If[
                
                Or[$CellContext`NoBeads$$ === 0, $CellContext`NoConfgs$$ === 
                 0], $CellContext`CenterMessageDialog[
@@ -335,17 +331,16 @@ Configurations."]; Null,
                  0]; {$CellContext`rList, $CellContext`Vol2List, \
 $CellContext`Vol1List, $CellContext`AvgBdList, $CellContext`EEDensityList, \
 $CellContext`EEList} = 
-                HCMP`FEMAll[$CellContext`GDirR, $CellContext`GDirD, \
-$CellContext`NoBeads$$, $CellContext`BT, $CellContext`ES, $CellContext`Y0, \
-$CellContext`\[Nu]0, $CellContext`MeshRefineFactor]; \
-$CellContext`CenterMessageDialog["Finite Element Calculation is done."]; 
-               Null]; Null, Method -> "Queued", ImageSize -> 300], 
-            SpanFromLeft, SpanFromLeft}, {
+                HCMP`Calc2D[$CellContext`GDirR, $CellContext`GDirD, \
+$CellContext`NoBeads$$, $CellContext`BT, $CellContext`ES, $CellContext`PR, \
+$CellContext`Y0, $CellContext`\[Nu]0]; $CellContext`CenterMessageDialog[
+                "2D Calculation is done."]; Null]; Null, Method -> "Queued", 
+             ImageSize -> 300], SpanFromLeft, SpanFromLeft}, {
             Button[
             "Output Results to Excel", 
              If[$CellContext`rList === 
                0, $CellContext`CenterMessageDialog[
-                "Please Perform Finite Element Calculation."]; 
+                "Please Perform 2D Calculation."]; 
                Null, $CellContext`outf = SystemDialogInput["FileSave", 
                   FileNameJoin[{$CellContext`WorkDir$$, "ResultSheet.xls"}]]; 
                HCMP`OutExcel[$CellContext`outf, $CellContext`NoBeads$$, \
@@ -373,8 +368,12 @@ $CellContext`EEDensityList, $CellContext`EEList];
                     Slider[
                     Dynamic[$CellContext`ES], {2, 20}], 
                     Dynamic[$CellContext`ES]}, {
-                    Style["For Finite Element Calculation:", Bold], 
-                    SpanFromLeft, SpanFromLeft}, {
+                    Item["Pixel ratio (\[Mu]m/Px)", Alignment -> Right], 
+                    InputField[
+                    Dynamic[$CellContext`PR], Number], 
+                    Dynamic[$CellContext`PR]}, {
+                    Style["For 2D Calculation:", Bold], SpanFromLeft, 
+                    SpanFromLeft}, {
                     Item["Young's modulus (Pa)", Alignment -> Right], 
                     InputField[
                     Dynamic[$CellContext`Y0], Number], 
@@ -383,22 +382,16 @@ $CellContext`EEDensityList, $CellContext`EEList];
                     InputField[
                     Dynamic[$CellContext`\[Nu]0], Number], 
                     Dynamic[$CellContext`\[Nu]0]}, {
-                    Item["Mesh Refine Factor", Alignment -> Right], 
-                    PopupMenu[
-                    Dynamic[$CellContext`MeshRefineFactor], {
-                    0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2}], 
-                    Dynamic[$CellContext`MeshRefineFactor]}, {
                     Button[
                     "Reset All Parameters to Default Value", $CellContext`BT = 
                     0.06; $CellContext`ES = 10; $CellContext`Y0 = 
-                    262; $CellContext`\[Nu]0 = 
-                    0.443; $CellContext`MeshRefineFactor = 1; Null, Method -> 
+                    262; $CellContext`\[Nu]0 = 0.443; Null, Method -> 
                     "Queued"], SpanFromLeft, SpanFromLeft}}, Alignment -> 
                     Left, BaseStyle -> {
                     FontSize -> 13, FontFamily -> "Helvetica"}, 
-                    Spacings -> {2, {4 -> 2, 8 -> 2, 14 -> 2, 16 -> 2}}], 
-                   FrameMargins -> 14, ImageSize -> {550, 350}], 
-                  NotebookDynamicExpression :> Refresh[
+                    Spacings -> {2, {5 -> 2, 8 -> 2}}], FrameMargins -> 14, 
+                   ImageSize -> {550, 250}], NotebookDynamicExpression :> 
+                  Refresh[
                     SetOptions[
                     EvaluationNotebook[], 
                     WindowMargins -> $CellContext`parentCenter$ - 
@@ -412,7 +405,7 @@ $CellContext`EEDensityList, $CellContext`EEList];
          DynamicModuleValues :> {}]}, 
       "Options" :> {ContinuousAction -> False, LocalizeVariables -> True}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{495., {211., 217.}},
+     ImageSizeCache->{495.1, {187.837841796875, 193.569775390625}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -423,16 +416,386 @@ $CellContext`EEDensityList, $CellContext`EEList];
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.800788000039022*^9, 3.823278240253126*^9},
+ CellChangeTimes->{3.800788000039022*^9, 3.823278240253126*^9, 
+  3.9741799775146217`*^9},
  CellTags->"Subroutines",
- CellLabel->"Out[3]=",ExpressionUUID->"1a606e61-1f9f-4dad-a2a5-88bc9a6e6a49"]
+ CellLabel->"Out[83]=",ExpressionUUID->"72b9773e-bb63-334c-a1b1-20d3b68e8048"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringJoin", "string", 
+   "\"String expected at position \\!\\(\\*RowBox[{\\\"2\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \
+\\\"_a\\\"}], \\\"]\\\"}]}]\\).\"", 2, 84, 17, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741799982374783`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"ea53751f-0a89-1e4e-804b-1f242a502a38"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringJoin", "string", 
+   "\"String expected at position \\!\\(\\*RowBox[{\\\"2\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}]\\).\"", 2, 84, 18, 
+   22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741799982434864`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"3e7b78e4-a2df-f24a-9fba-563e513aba92"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringJoin", "string", 
+   "\"String expected at position \\!\\(\\*RowBox[{\\\"2\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}]\\).\"", 2, 84, 19, 
+   22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741799982464867`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"5f40adc6-6fba-334d-a1ec-5219d5fef58b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"StringJoin\\\", \
+\\\"::\\\", \\\"string\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 84, 20, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741799982504864`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"4f75a669-800c-4840-b9ca-24cec48f274a"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Set", "shape", 
+   "\"Lists \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"FE`rList$$782\\\", \
+\\\",\\\", \\\"FE`Vol2List$$782\\\", \\\",\\\", \\\"FE`Vol1List$$782\\\", \
+\\\",\\\", \\\"FE`AvgBdList$$782\\\", \\\",\\\", \
+\\\"FE`EEDensityList$$782\\\", \\\",\\\", \\\"FE`EEList$$782\\\"}], \
+\\\"}\\\"}]\\) and \\!\\(\\*RowBox[{\\\"Calc2D\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_\
+Model_V2\\\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_1\\\\\\\\\\\\\\\\Time0.\
+tiff\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_2\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\"\
+\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_3\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\"\
+\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_4\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\"\
+\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_5\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\"\
+\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_6\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\"\
+\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a_7\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\"\
+\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"37\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a5_1\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\
+\"\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a5_2\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\
+\"\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a5_3\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\
+\"\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a5_4\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\
+\"\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a5_5\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\
+\"\\\", \\\",\\\", \
+\\\"\\\\\\\"A:\\\\\\\\\\\\\\\\251208_HCMP_Model\\\\\\\\\\\\\\\\HCMP_Model_V2\\\
+\\\\\\\\\\\\\\Probe\\\\\\\\\\\\\\\\Probe_a5_6\\\\\\\\\\\\\\\\Time0.tiff\\\\\\\
+\"\\\", \\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"787\\\", \\\"\
+\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\
+\\\"\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}], \
+\\\",\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"4\\\", \\\"\[RightSkeleton]\\\
+\"}], \\\",\\\", \\\"124\\\", \\\",\\\", \\\"0.443`\\\"}], \\\"]\\\"}]\\) are \
+not the same shape.\"", 2, 84, 21, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.974180009046385*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"2ba132df-d994-9645-bacf-f7f2377f2880"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Transpose", "nmtx", 
+   "\"The first two levels of \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \
+\\\"<>\\\", RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\" \
+\\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\\\\\\\"Probe\\\\\\\
+\"\\\", \\\"<>\\\", RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\
+\", \\\" \\\", \\\"_\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"6\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"7\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"8\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"9\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"10\\\", \\\" \\\", \
+\\\"_\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \
+\\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"21\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"6\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"7\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"8\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"9\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"10\\\", \\\" \\\", \
+\\\"_\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\\\
+\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", RowBox[{\\\"IntegerString\\\", \
+\\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"6\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"787\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \
+\\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\"}]}], \\\"}\\\"}]\\) cannot be \
+transposed.\"", 2, 84, 22, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741800188711834`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"adff5678-d676-e14a-8538-65f1332285f7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Transpose", "tperm", 
+   "\"Permutation \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \
+\\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"6\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"7\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"8\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"9\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"10\\\", \\\" \\\", \
+\\\"_\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \
+\\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a2\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"21\\\", \\\"\[RightSkeleton]\\\"}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"6\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"7\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"8\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"9\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"10\\\", \\\" \\\", \
+\\\"_\\\", \\\" \\\", \\\"_a4\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\\\
+\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", RowBox[{\\\"IntegerString\\\", \
+\\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \
+\\\",\\\", RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"4\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"5\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", \
+RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
+RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"6\\\", \\\" \\\", \\\"_\
+\\\", \\\" \\\", \\\"_a5\\\"}], \\\"]\\\"}]}], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"787\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}], \
+\\\",\\\", RowBox[{\\\"{\\\", \\\"}\\\"}]}], \\\"}\\\"}]\\) is longer than \
+the dimensions \\!\\(\\*RowBox[{\\\"{\\\", \\\"2\\\", \\\"}\\\"}]\\) of the \
+expression.\"", 2, 84, 23, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741800188918533`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"a6bc780e-6dba-6b4e-b905-75bab64892ad"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 84, 24, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741800188963566`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"6d0b93f1-00b8-ea42-8a9f-d0f719d62314"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"2\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 84, 25, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741800189003563`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"42a55ae8-6139-2641-bc25-f6bcb07b8f05"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"3\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"", 2, 84, 26, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741800189027615`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"d540bc52-7cdc-0940-bf49-952db3031806"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
+\\\"partw\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 84, 27, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9741800189053593`*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"98fe28a6-fc1d-9148-83dc-8d031b408516"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Export", "fmterr", 
+   "\"Invalid \\!\\(\\*RowBox[{\\\"\\\\\\\"XLS\\\\\\\"\\\"}]\\) format.\"", 2,
+    84, 28, 22965109396790145130, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.974180019451082*^9},
+ CellTags->"Subroutines",
+ CellLabel->"",ExpressionUUID->"e359a7dd-9594-b146-8fbe-396f4aa69d0d"]
 }, Open  ]]
 },
 InitializationCellEvaluation->True,
 InitializationCellWarning->False,
-WindowSize->{1895, 1226},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 18, 2020)",
+WindowSize->{1895, 1001},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7b87bb52-5c85-4ecf-9046-730221ab0eac"
 ]
@@ -442,27 +805,75 @@ ExpressionUUID->"7b87bb52-5c85-4ecf-9046-730221ab0eac"
 (*CellTagsOutline
 CellTagsIndex->{
  "Subroutines"->{
-  Cell[580, 22, 6686, 97, 19, "Input",ExpressionUUID->"8841a066-2333-45df-a981-fcca830a398c",
+  Cell[580, 22, 6707, 97, 19, "Input",ExpressionUUID->"8841a066-2333-45df-a981-fcca830a398c",
    CellOpen->False,
    InitializationCell->True,
    CellTags->"Subroutines"],
-  Cell[7269, 121, 16815, 306, 470, "Output",ExpressionUUID->"1a606e61-1f9f-4dad-a2a5-88bc9a6e6a49",
+  Cell[7290, 121, 16621, 300, 417, "Output",ExpressionUUID->"72b9773e-bb63-334c-a1b1-20d3b68e8048",
+   CellTags->"Subroutines"],
+  Cell[23914, 423, 536, 11, 26, "Message",ExpressionUUID->"ea53751f-0a89-1e4e-804b-1f242a502a38",
+   CellTags->"Subroutines"],
+  Cell[24453, 436, 562, 12, 26, "Message",ExpressionUUID->"3e7b78e4-a2df-f24a-9fba-563e513aba92",
+   CellTags->"Subroutines"],
+  Cell[25018, 450, 562, 12, 26, "Message",ExpressionUUID->"5f40adc6-6fba-334d-a1ec-5219d5fef58b",
+   CellTags->"Subroutines"],
+  Cell[25583, 464, 464, 10, 26, "Message",ExpressionUUID->"4f75a669-800c-4840-b9ca-24cec48f274a",
+   CellTags->"Subroutines"],
+  Cell[26050, 476, 3465, 58, 81, "Message",ExpressionUUID->"2ba132df-d994-9645-bacf-f7f2377f2880",
+   CellTags->"Subroutines"],
+  Cell[29518, 536, 6140, 97, 62, "Message",ExpressionUUID->"adff5678-d676-e14a-8538-65f1332285f7",
+   CellTags->"Subroutines"],
+  Cell[35661, 635, 6214, 99, 62, "Message",ExpressionUUID->"a6bc780e-6dba-6b4e-b905-75bab64892ad",
+   CellTags->"Subroutines"],
+  Cell[41878, 736, 397, 9, 26, "Message",ExpressionUUID->"6d0b93f1-00b8-ea42-8a9f-d0f719d62314",
+   CellTags->"Subroutines"],
+  Cell[42278, 747, 397, 9, 26, "Message",ExpressionUUID->"42a55ae8-6139-2641-bc25-f6bcb07b8f05",
+   CellTags->"Subroutines"],
+  Cell[42678, 758, 397, 9, 26, "Message",ExpressionUUID->"d540bc52-7cdc-0940-bf49-952db3031806",
+   CellTags->"Subroutines"],
+  Cell[43078, 769, 457, 10, 26, "Message",ExpressionUUID->"98fe28a6-fc1d-9148-83dc-8d031b408516",
+   CellTags->"Subroutines"],
+  Cell[43538, 781, 367, 9, 26, "Message",ExpressionUUID->"e359a7dd-9594-b146-8fbe-396f4aa69d0d",
    CellTags->"Subroutines"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Subroutines", 24517, 443}
+ {"Subroutines", 44343, 806}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 6686, 97, 19, "Input",ExpressionUUID->"8841a066-2333-45df-a981-fcca830a398c",
+Cell[580, 22, 6707, 97, 19, "Input",ExpressionUUID->"8841a066-2333-45df-a981-fcca830a398c",
  CellOpen->False,
  InitializationCell->True,
  CellTags->"Subroutines"],
-Cell[7269, 121, 16815, 306, 470, "Output",ExpressionUUID->"1a606e61-1f9f-4dad-a2a5-88bc9a6e6a49",
+Cell[7290, 121, 16621, 300, 417, "Output",ExpressionUUID->"72b9773e-bb63-334c-a1b1-20d3b68e8048",
+ CellTags->"Subroutines"],
+Cell[23914, 423, 536, 11, 26, "Message",ExpressionUUID->"ea53751f-0a89-1e4e-804b-1f242a502a38",
+ CellTags->"Subroutines"],
+Cell[24453, 436, 562, 12, 26, "Message",ExpressionUUID->"3e7b78e4-a2df-f24a-9fba-563e513aba92",
+ CellTags->"Subroutines"],
+Cell[25018, 450, 562, 12, 26, "Message",ExpressionUUID->"5f40adc6-6fba-334d-a1ec-5219d5fef58b",
+ CellTags->"Subroutines"],
+Cell[25583, 464, 464, 10, 26, "Message",ExpressionUUID->"4f75a669-800c-4840-b9ca-24cec48f274a",
+ CellTags->"Subroutines"],
+Cell[26050, 476, 3465, 58, 81, "Message",ExpressionUUID->"2ba132df-d994-9645-bacf-f7f2377f2880",
+ CellTags->"Subroutines"],
+Cell[29518, 536, 6140, 97, 62, "Message",ExpressionUUID->"adff5678-d676-e14a-8538-65f1332285f7",
+ CellTags->"Subroutines"],
+Cell[35661, 635, 6214, 99, 62, "Message",ExpressionUUID->"a6bc780e-6dba-6b4e-b905-75bab64892ad",
+ CellTags->"Subroutines"],
+Cell[41878, 736, 397, 9, 26, "Message",ExpressionUUID->"6d0b93f1-00b8-ea42-8a9f-d0f719d62314",
+ CellTags->"Subroutines"],
+Cell[42278, 747, 397, 9, 26, "Message",ExpressionUUID->"42a55ae8-6139-2641-bc25-f6bcb07b8f05",
+ CellTags->"Subroutines"],
+Cell[42678, 758, 397, 9, 26, "Message",ExpressionUUID->"d540bc52-7cdc-0940-bf49-952db3031806",
+ CellTags->"Subroutines"],
+Cell[43078, 769, 457, 10, 26, "Message",ExpressionUUID->"98fe28a6-fc1d-9148-83dc-8d031b408516",
+ CellTags->"Subroutines"],
+Cell[43538, 781, 367, 9, 26, "Message",ExpressionUUID->"e359a7dd-9594-b146-8fbe-396f4aa69d0d",
  CellTags->"Subroutines"]
 }, Open  ]]
 }
