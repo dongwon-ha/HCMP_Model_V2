@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     65710,       1308]
-NotebookOptionsPosition[     61338,       1219]
-NotebookOutlinePosition[     63872,       1275]
-CellTagsIndexPosition[     63797,       1270]
+NotebookDataLength[     56516,       1104]
+NotebookOptionsPosition[     55152,       1063]
+NotebookOutlinePosition[     56164,       1095]
+CellTagsIndexPosition[     56089,       1090]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -758,10 +758,9 @@ Configurations.\>\"", "]"}], ";"}], "\[IndentingNewLine]", ",",
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`NoBeads$$ = 837, $CellContext`NoConfgs$$ = 
-    837, $CellContext`WorkDir$$ = 
-    "A:\\251208_HCMP_Model\\HCMP_Model_V2_Local\\Probe\\", Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`NoBeads$$ = 0, $CellContext`NoConfgs$$ = 
+    0, $CellContext`WorkDir$$ = "Null", Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`WorkDir$$], "Null"}, 0, ControlType -> None}, {{
@@ -893,7 +892,7 @@ $CellContext`EEDensityList, $CellContext`EEList];
          BaseStyle -> {FontSize -> 13, FontFamily -> "Helvetica"}], 
         DynamicModuleValues :> {}]], Manipulate`Dump`ThisIsNotAControl, 
       ControlType -> None}}, Typeset`size$$ = {
-    450., {32.7416015625, 36.8744140625}}, Typeset`update$$ = 0, 
+    450., {32.53115234375, 36.66396484375}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
     Typeset`keyframeActionsQ$$ = False, Typeset`keyframeList$$ = {}}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1042,7 +1041,7 @@ $CellContext`EEDensityList, $CellContext`EEList];
          DynamicModuleValues :> {}]}, 
       "Options" :> {ContinuousAction -> False, LocalizeVariables -> True}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{495.1, {187.837841796875, 193.569775390625}},
+     ImageSizeCache->{497.1, {192.877392578125, 198.609326171875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1057,170 +1056,15 @@ $CellContext`EEDensityList, $CellContext`EEList];
   3.9741823639242954`*^9, 3.9741828625526695`*^9, 3.9741829080536823`*^9, 
   3.9741836670218754`*^9, 3.9741838517339954`*^9, 3.9741879248399353`*^9, 
   3.9741880622994823`*^9, 3.974188249568796*^9, 3.9741883967558823`*^9, 
-  3.974190235595398*^9, 3.9741914258636665`*^9},
+  3.974190235595398*^9, 3.9741914258636665`*^9, 3.9741919395743523`*^9},
  CellTags->"Subroutines",
- CellLabel->"Out[9]=",ExpressionUUID->"35c8e1bb-9f44-7a4e-91fc-56ad81096e4b"],
-
-Cell[BoxData[
- TemplateBox[{
-  "StringJoin", "string", 
-   "\"String expected at position \\!\\(\\*RowBox[{\\\"2\\\"}]\\) in \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
-RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"_\\\", \\\" \\\", \
-\\\"_a\\\"}], \\\"]\\\"}]}]\\).\"", 2, 10, 1, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.974191432969982*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"b1be75c8-5e0c-c14b-b3f7-0ee3f5b4bf09"],
-
-Cell[BoxData[
- TemplateBox[{
-  "StringJoin", "string", 
-   "\"String expected at position \\!\\(\\*RowBox[{\\\"2\\\"}]\\) in \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
-RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"2\\\", \\\" \\\", \\\"_\
-\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}]\\).\"", 2, 10, 2, 
-   22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914329797363`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"52c514f2-8ca2-d241-8e1e-836308624fb6"],
-
-Cell[BoxData[
- TemplateBox[{
-  "StringJoin", "string", 
-   "\"String expected at position \\!\\(\\*RowBox[{\\\"2\\\"}]\\) in \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"Probe\\\\\\\"\\\", \\\"<>\\\", \
-RowBox[{\\\"IntegerString\\\", \\\"[\\\", RowBox[{\\\"3\\\", \\\" \\\", \\\"_\
-\\\", \\\" \\\", \\\"_a\\\"}], \\\"]\\\"}]}]\\).\"", 2, 10, 3, 
-   22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914329855995`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"f91589d7-67b9-ed43-a18f-29adbaa952c2"],
-
-Cell[BoxData[
- TemplateBox[{
-  "General", "stop", 
-   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"StringJoin\\\", \
-\\\"::\\\", \\\"string\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
-during this calculation.\"", 2, 10, 4, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914329855995`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"ebbb4bb6-2e21-d54c-9f45-fa116ba36630"],
-
-Cell[BoxData[
- TemplateBox[{
-  "LinkObject", "linkd", 
-   "\"Unable to communicate with closed link \
-\\!\\(\\*RowBox[{\\\"LinkObject\\\", \\\"[\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\\\\\\\\\\\
-\\\\\\Wolfram Research\\\\\\\\\\\\\\\\Wolfram\\\\\\\\\\\\\\\\14.2\\\\\\\\\\\\\
-\\\\WolframKernel\\\\\\\\\\\\\\\" -noicon -noinit -subkernel \
--wstp\\\\\\\"\\\", \\\",\\\", \\\"1337\\\", \\\",\\\", \\\"29\\\"}], \
-\\\"]\\\"}]\\).\"", 2, 10, 5, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914668060093`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"373f0d08-5d92-8e49-b399-552e4325de81"],
-
-Cell[BoxData[
- TemplateBox[{
-  "KernelObject", "rdead", 
-   "\"Discarding \\!\\(\\*RowBox[{\\\"\\\\\\\"kernel 14 (Local)\\\\\\\"\\\"}]\
-\\).\"", 2, 10, 6, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.974191466816725*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"ff2b49ee-392e-2144-bc9f-9ae507ee15aa"],
-
-Cell[BoxData[
- TemplateBox[{
-  "LaunchKernels", "req", 
-   "\"Requeueing evaluations \\!\\(\\*RowBox[{\\\"{\\\", \\\"38\\\", \
-\\\"}\\\"}]\\) assigned to \\!\\(\\*RowBox[{\\\"\\\\\\\"dead kernel 14 \
-(Local)\\\\\\\"\\\"}]\\).\"", 2, 10, 7, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914668308086`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"364bb7e8-dfec-2c46-85bf-2a70b2a5283a"],
-
-Cell[BoxData[
- TemplateBox[{
-  "LinkObject", "linkd", 
-   "\"Unable to communicate with closed link \
-\\!\\(\\*RowBox[{\\\"LinkObject\\\", \\\"[\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\\\\\\\\\\\
-\\\\\\Wolfram Research\\\\\\\\\\\\\\\\Wolfram\\\\\\\\\\\\\\\\14.2\\\\\\\\\\\\\
-\\\\WolframKernel\\\\\\\\\\\\\\\" -noicon -noinit -subkernel \
--wstp\\\\\\\"\\\", \\\",\\\", \\\"1327\\\", \\\",\\\", \\\"19\\\"}], \
-\\\"]\\\"}]\\).\"", 2, 10, 8, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914668373775`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"ea61257c-1cc0-654b-a8df-afc867a4c2c2"],
-
-Cell[BoxData[
- TemplateBox[{
-  "KernelObject", "rdead", 
-   "\"Discarding \\!\\(\\*RowBox[{\\\"\\\\\\\"kernel 4 \
-(Local)\\\\\\\"\\\"}]\\).\"", 2, 10, 9, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.974191466852087*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"adb395f3-c1ea-574f-984e-dffeab1d090a"],
-
-Cell[BoxData[
- TemplateBox[{
-  "LaunchKernels", "req", 
-   "\"Requeueing evaluations \\!\\(\\*RowBox[{\\\"{\\\", \\\"77\\\", \
-\\\"}\\\"}]\\) assigned to \\!\\(\\*RowBox[{\\\"\\\\\\\"dead kernel 4 (Local)\
-\\\\\\\"\\\"}]\\).\"", 2, 10, 10, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914668626823`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"2f932be1-4c4d-2545-b6c4-5b4b5c63cb4d"],
-
-Cell[BoxData[
- TemplateBox[{
-  "LaunchKernels", "clone", 
-   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"dead kernel 14 (Local)\\\\\\\"\\\"}]\\) \
-resurrected as \\!\\(\\*RowBox[{\\\"\\\\\\\"kernel 25 \
-(Local)\\\\\\\"\\\"}]\\).\"", 2, 10, 11, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.974191469271641*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"28a757d5-dc2f-794f-b288-61b94634a8a2"],
-
-Cell[BoxData[
- TemplateBox[{
-  "LaunchKernels", "clone", 
-   "\"\\!\\(\\*RowBox[{\\\"\\\\\\\"dead kernel 4 (Local)\\\\\\\"\\\"}]\\) \
-resurrected as \\!\\(\\*RowBox[{\\\"\\\\\\\"kernel 26 \
-(Local)\\\\\\\"\\\"}]\\).\"", 2, 10, 12, 22965187438660121749, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.9741914717090664`*^9},
- CellTags->"Subroutines",
- CellLabel->"",ExpressionUUID->"be592cc7-a137-404b-983a-f855dcfe6c39"]
+ CellLabel->"Out[9]=",ExpressionUUID->"acc6ca12-ff0d-674a-8fa3-8f94f80cac49"]
 }, Open  ]]
 },
 InitializationCellEvaluation->True,
 InitializationCellWarning->False,
-WindowSize->{958, 1001},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{957, 999.75},
+WindowMargins->{{Automatic, -1679.25}, {Automatic, -1.5}},
 FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"1bf5b452-16ea-443f-89b5-1d8ebe281da1"
@@ -1239,37 +1083,13 @@ CellTagsIndex->{
    CellOpen->False,
    InitializationCell->True,
    CellTags->"Subroutines"],
-  Cell[38277, 757, 16889, 304, 398, "Output",ExpressionUUID->"35c8e1bb-9f44-7a4e-91fc-56ad81096e4b",
-   CellTags->"Subroutines"],
-  Cell[55169, 1063, 533, 11, 26, "Message",ExpressionUUID->"b1be75c8-5e0c-c14b-b3f7-0ee3f5b4bf09",
-   CellTags->"Subroutines"],
-  Cell[55705, 1076, 561, 12, 26, "Message",ExpressionUUID->"52c514f2-8ca2-d241-8e1e-836308624fb6",
-   CellTags->"Subroutines"],
-  Cell[56269, 1090, 561, 12, 26, "Message",ExpressionUUID->"f91589d7-67b9-ed43-a18f-29adbaa952c2",
-   CellTags->"Subroutines"],
-  Cell[56833, 1104, 463, 10, 26, "Message",ExpressionUUID->"ebbb4bb6-2e21-d54c-9f45-fa116ba36630",
-   CellTags->"Subroutines"],
-  Cell[57299, 1116, 700, 14, 44, "Message",ExpressionUUID->"373f0d08-5d92-8e49-b399-552e4325de81",
-   CellTags->"Subroutines"],
-  Cell[58002, 1132, 379, 9, 26, "Message",ExpressionUUID->"ff2b49ee-392e-2144-bc9f-9ae507ee15aa",
-   CellTags->"Subroutines"],
-  Cell[58384, 1143, 466, 10, 26, "Message",ExpressionUUID->"364bb7e8-dfec-2c46-85bf-2a70b2a5283a",
-   CellTags->"Subroutines"],
-  Cell[58853, 1155, 700, 14, 44, "Message",ExpressionUUID->"ea61257c-1cc0-654b-a8df-afc867a4c2c2",
-   CellTags->"Subroutines"],
-  Cell[59556, 1171, 378, 9, 26, "Message",ExpressionUUID->"adb395f3-c1ea-574f-984e-dffeab1d090a",
-   CellTags->"Subroutines"],
-  Cell[59937, 1182, 466, 10, 26, "Message",ExpressionUUID->"2f932be1-4c4d-2545-b6c4-5b4b5c63cb4d",
-   CellTags->"Subroutines"],
-  Cell[60406, 1194, 456, 10, 26, "Message",ExpressionUUID->"28a757d5-dc2f-794f-b288-61b94634a8a2",
-   CellTags->"Subroutines"],
-  Cell[60865, 1206, 457, 10, 26, "Message",ExpressionUUID->"be592cc7-a137-404b-983a-f855dcfe6c39",
+  Cell[38277, 757, 16859, 303, 408, "Output",ExpressionUUID->"acc6ca12-ff0d-674a-8fa3-8f94f80cac49",
    CellTags->"Subroutines"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Subroutines", 61759, 1232}
+ {"Subroutines", 55585, 1076}
  }
 *)
 (*NotebookFileOutline
@@ -1283,31 +1103,7 @@ Cell[10378, 194, 27896, 561, 19, "Input",ExpressionUUID->"be9027f0-9695-4aff-aec
  CellOpen->False,
  InitializationCell->True,
  CellTags->"Subroutines"],
-Cell[38277, 757, 16889, 304, 398, "Output",ExpressionUUID->"35c8e1bb-9f44-7a4e-91fc-56ad81096e4b",
- CellTags->"Subroutines"],
-Cell[55169, 1063, 533, 11, 26, "Message",ExpressionUUID->"b1be75c8-5e0c-c14b-b3f7-0ee3f5b4bf09",
- CellTags->"Subroutines"],
-Cell[55705, 1076, 561, 12, 26, "Message",ExpressionUUID->"52c514f2-8ca2-d241-8e1e-836308624fb6",
- CellTags->"Subroutines"],
-Cell[56269, 1090, 561, 12, 26, "Message",ExpressionUUID->"f91589d7-67b9-ed43-a18f-29adbaa952c2",
- CellTags->"Subroutines"],
-Cell[56833, 1104, 463, 10, 26, "Message",ExpressionUUID->"ebbb4bb6-2e21-d54c-9f45-fa116ba36630",
- CellTags->"Subroutines"],
-Cell[57299, 1116, 700, 14, 44, "Message",ExpressionUUID->"373f0d08-5d92-8e49-b399-552e4325de81",
- CellTags->"Subroutines"],
-Cell[58002, 1132, 379, 9, 26, "Message",ExpressionUUID->"ff2b49ee-392e-2144-bc9f-9ae507ee15aa",
- CellTags->"Subroutines"],
-Cell[58384, 1143, 466, 10, 26, "Message",ExpressionUUID->"364bb7e8-dfec-2c46-85bf-2a70b2a5283a",
- CellTags->"Subroutines"],
-Cell[58853, 1155, 700, 14, 44, "Message",ExpressionUUID->"ea61257c-1cc0-654b-a8df-afc867a4c2c2",
- CellTags->"Subroutines"],
-Cell[59556, 1171, 378, 9, 26, "Message",ExpressionUUID->"adb395f3-c1ea-574f-984e-dffeab1d090a",
- CellTags->"Subroutines"],
-Cell[59937, 1182, 466, 10, 26, "Message",ExpressionUUID->"2f932be1-4c4d-2545-b6c4-5b4b5c63cb4d",
- CellTags->"Subroutines"],
-Cell[60406, 1194, 456, 10, 26, "Message",ExpressionUUID->"28a757d5-dc2f-794f-b288-61b94634a8a2",
- CellTags->"Subroutines"],
-Cell[60865, 1206, 457, 10, 26, "Message",ExpressionUUID->"be592cc7-a137-404b-983a-f855dcfe6c39",
+Cell[38277, 757, 16859, 303, 408, "Output",ExpressionUUID->"acc6ca12-ff0d-674a-8fa3-8f94f80cac49",
  CellTags->"Subroutines"]
 }, Open  ]]
 }
